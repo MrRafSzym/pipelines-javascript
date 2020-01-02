@@ -18,5 +18,5 @@ steps:
 - script: |
     npm install
     npm install --only=dev    
-    npx mocha test --reporter mocha-junit-reporter
+    npx gulp default
   displayName: 'run tests'
