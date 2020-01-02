@@ -23,6 +23,6 @@ steps:
 
 - script: |
     npm install
-    npm install --only=dev    
+    npm install -g gulp    
     npx gulp default
   displayName: 'run tests'
