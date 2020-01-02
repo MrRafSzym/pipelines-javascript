@@ -15,14 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- script: |
+    npm install 
+    npx gulp default
+  displayName: 'run tests'
+
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
     testRunner: JUnit
     testResultsFiles: '**/TEST-RESULTS.xml'
 
-- script: |
-    npm install
-    npm install -g gulp    
-    npx gulp default
-  displayName: 'run tests'
